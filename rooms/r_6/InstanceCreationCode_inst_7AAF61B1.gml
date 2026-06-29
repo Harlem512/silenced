@@ -1,0 +1,1 @@
+self.name = Npc_Names.Steve

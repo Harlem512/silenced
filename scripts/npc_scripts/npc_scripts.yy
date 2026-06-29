@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"npc_scripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"npc_scripts",
+  "parent":{
+    "name":"Silenced",
+    "path":"Silenced.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
