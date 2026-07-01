@@ -12,7 +12,8 @@ while i < array_length(global.deb_msg) {
 	i += 1
 }
 global.deb_msg = [
-	"[1-9] room tp",
+	"[f3 ] disable debug",
+	"[1-8] room tp",
 	"[mb1] teleport",
 	"[f1 ] light",
 ]

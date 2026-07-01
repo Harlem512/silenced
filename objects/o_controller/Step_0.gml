@@ -1,3 +1,4 @@
+// debug options
 if !global.can_debug { return }
 
 if keyboard_check_pressed(vk_f3) {
@@ -37,8 +38,5 @@ if keyboard_check_pressed(ord("7")) {
 	room_goto(r_7)
 }
 if keyboard_check_pressed(ord("8")) {
-	room_goto(r_8)
-}
-if keyboard_check_pressed(ord("9")) {
-	room_goto(r_7)
+	room_goto(r_9)
 }

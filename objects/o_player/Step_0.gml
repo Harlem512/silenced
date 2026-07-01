@@ -70,7 +70,6 @@ for (var i = 0; i < did_collide; i++) {
 
 // update global state
 global.is_scraping = did_collide > 0 ? 60 : global.is_scraping - 1
-global.is_walking = dx != 0 or dy != 0
 
 self.collide_delay -= 1
 if did_collide > 0 and self.collide_delay <= 0 {
@@ -83,7 +82,7 @@ if distance_to_npc < 60 {
 	self.breath_delay -= 10 - (distance_to_npc div 6)
 }
 
-if global.is_walking {
+if dx != 0 or dy != 0 {
 	global.has_moved = true
 	self.walk_delay -= 1
 	if self.walk_delay <= 0 and !did_collide {

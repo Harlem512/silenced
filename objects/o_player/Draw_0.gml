@@ -1,8 +1,5 @@
-if LIGHT { return }
-
 if global.touch_surf == undefined {
 	// triggered on entry to new room
-	show_debug_message("blank touch")
 	global.touch_surf = surface_create(room_width, room_height, surface_r8unorm)
 	
 	// room transition, copy and clear buffer
@@ -47,7 +44,6 @@ if global.touch_surf == undefined {
 	global.touch_buff = buffer_create(room_width * room_height * 4, buffer_fixed, 1);
 } else if !surface_exists(global.touch_surf) {
 	// load surface from buffer
-	show_debug_message("load touch")
 	global.touch_surf = surface_create(room_width, room_height, surface_r8unorm)
 	buffer_set_surface(global.touch_buff, global.touch_surf, 0)
 	surface_set_target(global.touch_surf)
@@ -55,6 +51,7 @@ if global.touch_surf == undefined {
 	surface_set_target(global.touch_surf)
 }
 
+// draw player touch circle
 draw_circle(self.x, self.y, TOUCH_SIZE, false)
 
 // backup drawing
@@ -64,7 +61,7 @@ surface_reset_target()
 
 // draw mask
 if !global.light {
-	gpu_set_blendmode_ext(bm_inv_src_colour, bm_src_color)
+	gpu_set_blendmode(bm_min)
 }
 draw_surface(global.touch_surf, 0, 0)
 gpu_set_blendmode(bm_normal)

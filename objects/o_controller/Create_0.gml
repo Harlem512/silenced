@@ -25,6 +25,7 @@ global.trans_y = 0
 global.trans_blackout_x = 0
 global.trans_blackout_y = 0
 
+// npc id array, for the credits
 global.npc_ids = [
 	Npc_Names.Carol,
 	Npc_Names.Charlie,

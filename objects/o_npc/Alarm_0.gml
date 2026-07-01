@@ -103,7 +103,16 @@ switch self.name {
 	case Npc_Names.Joey:
 		self.data = [
 			{
-				start_wait: 1,
+				start_wait: 10,
+				next: function () { return o_player.y > 140 },
+				action: Npc_Action.IDLE,
+				wait_over: function () {
+					noise("hmm", 20, 1)
+					return irandom_range(20, 50)
+				},
+			},
+			{
+				start_wait: 20,
 				next: undefined,
 				action: Npc_Action.IDLE,
 				wait_over: function () {
@@ -117,7 +126,7 @@ switch self.name {
 				action: Npc_Action.MOVE,
 				target_x: 440,
 				target_y: 205,
-				duration: 60,
+				duration: 80,
 			},
 			{
 				start_wait: 0,

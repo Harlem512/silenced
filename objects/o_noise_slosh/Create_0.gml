@@ -1,6 +1,6 @@
 event_inherited()
 
-self.sound = "shshsh"
+self.sound = "slosh"
 self.duration = 60
 self.font_size = 0.5
 self.period_short = 100

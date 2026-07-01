@@ -6,11 +6,10 @@ if global.light {
 	draw_tilemap(map_id, 0, 0)
 }
 
-log(global.silenced)
+log({mx: mouse_x, my: mouse_y})
 
 with o_player {
 	log({x: self.x, y: self.y})
-	log({mx: mouse_x, my: mouse_y})
 
 	// collision size
 	draw_rectangle_color(
